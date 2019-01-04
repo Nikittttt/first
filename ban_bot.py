@@ -29,7 +29,7 @@ bot = Bot(token=API_TOKEN, loop=loop, proxy=PROXY_URL)
 dp = Dispatcher(bot)
 
 
-# соединение с базой данных
+# соединение с proxy
 async def fetch(url, proxy=None, proxy_auth=None):
     async with aiohttp.ClientSession() as session:
         async with session.get(url, proxy=proxy, proxy_auth=proxy_auth) as response:
